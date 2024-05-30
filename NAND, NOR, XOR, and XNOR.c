@@ -1,30 +1,24 @@
 #include <stdio.h>
 
-// Function to implement the NAND gate
 int nand_gate(int a, int b) {
     return !(a && b);
 }
 
-// Function to implement the NOR gate
 int nor_gate(int a, int b) {
     return !(a || b);
 }
 
-// Function to implement the XOR gate
 int xor_gate(int a, int b) {
     return (a || b) && !(a && b);
 }
 
-// Function to implement the XNOR gate
 int xnor_gate(int a, int b) {
     return !((a || b) && !(a && b));
 }
 
 int main() {
-    // Display the header for the truth table
     printf("a b           a NAND b    a NOR b    a XOR b    a XNOR b\n");
 
-    // Test each logic gate function with a variety of inputs
     int a, b;
     for (a = 0; a <= 1; a++) {
         for (b = 0; b <= 1; b++) {
